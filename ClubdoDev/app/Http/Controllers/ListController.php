@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 
 class ListController extends Controller
 {
     public function index(){
-        if(Auth::check() === true){
-            return view('product.list-product');
+
+        $products = Product::all();
+
+        if(Auth::check() === true) {
+            return view('product.list-product', ['products' => $products]);
         }else{
             return view('auth.login');
         }
-        
     }
 }

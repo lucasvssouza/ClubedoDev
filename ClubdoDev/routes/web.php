@@ -12,13 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\ListController::class, 'index'])->name('home');
+Route::get('home', [App\Http\Controllers\ListController::class , 'index']);
 
-Route::get('/product-list', [App\Http\Controllers\ListController::class , 'index'])->name('product-list');
-Route::get('/product-create', [App\Http\Controllers\CreateController::class , 'index']);
-Route::get('/product-edit', [App\Http\Controllers\EditController::class , 'index']);
-Route::get('/product-edit', [App\Http\Controllers\Auth\LoginController::class , 'index']);
+Route::get('/list-product', [App\Http\Controllers\ListController::class , 'index']);
+Route::get('/create-product', [App\Http\Controllers\CreateController::class , 'index']);
+Route::get('/edit-product/{id}', [App\Http\Controllers\EditController::class , 'index']);
+
+Route::post('/edit-product/submit', [App\Http\Controllers\EditController::class , 'editProduct'])->name('editProduct');
+
+Route::post('/create-product/submit', [App\Http\Controllers\CreateController::class , 'newProduct'])->name('newProduct');
+
+
+
+Route::get('/create-product/submit', [App\Http\Controllers\CreateController::class , 'index']);

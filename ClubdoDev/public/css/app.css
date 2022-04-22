@@ -11286,3 +11286,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.gradient {
+  background: rgb(7, 7, 223);
+  background: linear-gradient(90deg, rgba(7, 7, 223, 1) 0%, rgba(3, 3, 154, 1) 50%, rgba(0, 0, 113, 1) 100%);
+}

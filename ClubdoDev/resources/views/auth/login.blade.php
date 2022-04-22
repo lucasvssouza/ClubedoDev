@@ -19,15 +19,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-        .gradient {
-            background: rgb(7, 7, 223);
-            background: linear-gradient(90deg, rgba(7, 7, 223, 1) 0%, rgba(3, 3, 154, 1) 50%, rgba(0, 0, 113, 1) 100%);
-        }
-    </style>
 </head>
 <body>
-    <section class="vh-100 gradient">
+    <div class="vh-100 gradient">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -35,7 +29,6 @@
                         <div class="card-body p-5 text-center">
 
                             <div class="mb-md-5 mt-md-4">
-
                                 <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                                 <p class="text-white-50 mb-5">Por favor digite o seu email e sua senha!</p>
                                 <form method="POST" action="{{ route('login') }}">
@@ -85,7 +78,7 @@
                 </div>
             </div>
         </div>
-    </section>
+</div>
 </body>
 
 </html>
