@@ -34,7 +34,6 @@
                                         <th class="text-end">
                                             <a href="/edit-product/{{$product -> id}}" style="text-decoration:none;"
                                                 class="text-black">✏️ Editar</a>
-
                                         </th>
                                     </tr>
                                     @endforeach

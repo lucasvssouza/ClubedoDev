@@ -43,8 +43,7 @@
                                     </div>
                                     <div class="mb-3 col-xs-12 col-sm-6">
                                         <div class="mt-4">
-                                            <input id="productImage" name="productImage" type="file" style="display:none;">
-                                            <input type="button" class="btn btn-primary mt-2 mx-auto" value="Enviar imagem 📁" onclick="document.getElementById('productImage').click();">
+                                        <input id="productImage" class="mt-2" name="productImage" type="file">
                                             <button type="submit" style="margin-left: 10px" class="btn mt-2  btn-primary float-end">Editar
                                                 Produto</button>
                                             <button type="button" class="btn btn-primary mt-2 float-end">
